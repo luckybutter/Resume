@@ -12,6 +12,7 @@
 		4D44A98D229C587200F00DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98B229C587200F00DB9 /* Main.storyboard */; };
 		4D44A98F229C587500F00DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98E229C587500F00DB9 /* Assets.xcassets */; };
 		4D44A992229C587500F00DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */; };
+		4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A99C229C5F8700F00DB9 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4D44A98E229C587500F00DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D44A991229C587500F00DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D44A993229C587500F00DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D44A99C229C5F8700F00DB9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		4D44A986229C587200F00DB9 /* Resume */ = {
 			isa = PBXGroup;
 			children = (
-				4D44A987229C587200F00DB9 /* AppDelegate.swift */,
-				4D44A989229C587200F00DB9 /* ViewController.swift */,
-				4D44A98B229C587200F00DB9 /* Main.storyboard */,
-				4D44A98E229C587500F00DB9 /* Assets.xcassets */,
-				4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */,
-				4D44A993229C587500F00DB9 /* Info.plist */,
+				4D44A99B229C5F2900F00DB9 /* Misc */,
+				4D44A99A229C5F2300F00DB9 /* UI */,
+				4D44A999229C5F1C00F00DB9 /* Models */,
 			);
 			path = Resume;
+			sourceTree = "<group>";
+		};
+		4D44A999229C5F1C00F00DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A99C229C5F8700F00DB9 /* Job.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D44A99A229C5F2300F00DB9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A989229C587200F00DB9 /* ViewController.swift */,
+				4D44A98B229C587200F00DB9 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4D44A99B229C5F2900F00DB9 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A987229C587200F00DB9 /* AppDelegate.swift */,
+				4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */,
+				4D44A98E229C587500F00DB9 /* Assets.xcassets */,
+				4D44A993229C587500F00DB9 /* Info.plist */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D44A98A229C587200F00DB9 /* ViewController.swift in Sources */,
+				4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */,
 				4D44A988229C587200F00DB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,12 +312,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JW7J9WCT8;
-				INFOPLIST_FILE = Resume/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resume/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutterllc.Resume;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutter.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,12 +330,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5JW7J9WCT8;
-				INFOPLIST_FILE = Resume/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resume/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutterllc.Resume;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutter.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
