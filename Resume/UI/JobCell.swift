@@ -25,6 +25,7 @@ class JobCell: UITableViewCell, OneTimeSetup {
         setupDetailsText(fromTextArray: job.details)
         setupDateText(fromStartDate: job.startDate, endDate: job.endDate)
         
+        layoutIfNeeded()
     }
     
     func setupDetailsText(fromTextArray textArray:[String]) {
@@ -49,18 +50,18 @@ class JobCell: UITableViewCell, OneTimeSetup {
         dateText += formatter.string(from: startDate)
         
         if let endDate = endDate {
-            dateText += "-\(formatter.string(from: endDate))"
+            dateText += " - \(formatter.string(from: endDate))"
         } else {
-            dateText += "Current"
+            dateText += " - Current"
         }
         
         dateLabel.text = dateText
     }
     
     func handleFirstTimeSetup() {
-        employerTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .black)
-        jobTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .bold)
-        dateLabel.font = AppConstant.quickFont(family: .lato, weight: .bold)
-        detailsLabel.font = AppConstant.quickFont(family: .lato, weight: .regular)
+        employerTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .black).withSize(24)
+        jobTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(20)
+        dateLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(11)
+        detailsLabel.font = AppConstant.quickFont(family: .lato, weight: .regular).withSize(17)
     }
 }

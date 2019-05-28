@@ -29,26 +29,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-Xn-RTy">
-                                                    <rect key="frame" x="20" y="10" width="194.5" height="38.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Employer Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-Xn-RTy">
+                                                    <rect key="frame" x="20" y="10" width="268" height="38.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-ZA-0ho">
-                                                    <rect key="frame" x="20" y="58.5" width="66" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-ZA-0ho">
+                                                    <rect key="frame" x="20" y="52.5" width="374" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date String" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-sG-xLg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Date String" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyb-sG-xLg">
                                                     <rect key="frame" x="308" y="10" width="86" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L17-Ex-AyN">
-                                                    <rect key="frame" x="20" y="109.5" width="374" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Details" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L17-Ex-AyN">
+                                                    <rect key="frame" x="20" y="103" width="374" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -56,13 +56,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="L17-Ex-AyN" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="leading" id="2HD-qn-b1G"/>
-                                                <constraint firstItem="pyb-sG-xLg" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="trailing" priority="250" constant="40" id="4Hl-sn-Ew1"/>
+                                                <constraint firstItem="Pdr-Xn-RTy" firstAttribute="trailing" secondItem="pyb-sG-xLg" secondAttribute="leading" constant="-20" id="4Hl-sn-Ew1"/>
                                                 <constraint firstItem="n1t-ZA-0ho" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="leading" id="4Ze-ag-6pY"/>
-                                                <constraint firstItem="n1t-ZA-0ho" firstAttribute="top" secondItem="Pdr-Xn-RTy" secondAttribute="bottom" constant="10" id="8Zd-Ym-13C"/>
-                                                <constraint firstItem="pyb-sG-xLg" firstAttribute="top" secondItem="pHO-xK-BUB" secondAttribute="top" constant="10" id="I2G-nE-QEV"/>
+                                                <constraint firstItem="n1t-ZA-0ho" firstAttribute="top" secondItem="Pdr-Xn-RTy" secondAttribute="bottom" constant="4" id="8Zd-Ym-13C"/>
                                                 <constraint firstItem="L17-Ex-AyN" firstAttribute="trailing" secondItem="pyb-sG-xLg" secondAttribute="trailing" id="IhK-gv-bn2"/>
-                                                <constraint firstAttribute="bottom" secondItem="L17-Ex-AyN" secondAttribute="bottom" priority="250" constant="100" id="Slc-l2-Fjl"/>
+                                                <constraint firstAttribute="bottom" secondItem="L17-Ex-AyN" secondAttribute="bottom" priority="250" constant="60" id="Slc-l2-Fjl"/>
                                                 <constraint firstItem="Pdr-Xn-RTy" firstAttribute="top" secondItem="pHO-xK-BUB" secondAttribute="top" constant="10" id="fuA-4h-TSr"/>
+                                                <constraint firstItem="n1t-ZA-0ho" firstAttribute="trailing" secondItem="pyb-sG-xLg" secondAttribute="trailing" id="gO5-nO-Ufr"/>
+                                                <constraint firstItem="pyb-sG-xLg" firstAttribute="top" secondItem="Pdr-Xn-RTy" secondAttribute="top" id="gsg-IQ-G0t"/>
                                                 <constraint firstItem="L17-Ex-AyN" firstAttribute="leading" secondItem="n1t-ZA-0ho" secondAttribute="leading" id="kfg-aD-3cQ"/>
                                                 <constraint firstItem="Pdr-Xn-RTy" firstAttribute="leading" secondItem="pHO-xK-BUB" secondAttribute="leading" constant="20" id="lDl-x1-JHq"/>
                                                 <constraint firstAttribute="trailing" secondItem="pyb-sG-xLg" secondAttribute="trailing" constant="20" id="nVK-cO-GlH"/>

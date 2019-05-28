@@ -10,4 +10,5 @@ import Foundation
 
 protocol FirestoreLoadable {
     init?(firestoreObjectPayload payload:[String:Any])
+    var collectionKey:String { get }
 }

@@ -16,33 +16,20 @@ class ResumeViewControllerBrain: ViewControllerBrain {
     weak var weakViewController: ResumeViewController?
     weak var weakViewControllerPresenter: ResumeViewControllerPresenter?
     
+    var isFetchingJobs = false
+    
     var jobs:[Job] = [] {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.weakViewControllerPresenter?.refreshUI()
+                self?.isFetchingJobs = false
             }
         }
     }
     
     
     func handleViewDidLoad() {
-        let db = Firestore.firestore()
-        db.collection("job").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                var extractedJobs:[Job] = []
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
-                    let job = Job(firestoreObjectPayload: document.data())
-                    extractedJobs.append(job)
-                }
-                
-                self.jobs = extractedJobs
-            }
-        }
-
+        fetchJobs()
     }
     
     func handleViewWillAppear() {
@@ -51,5 +38,27 @@ class ResumeViewControllerBrain: ViewControllerBrain {
     
     func handleViewDidAppear() {
         
+    }
+    
+    func fetchJobs() {
+        guard isFetchingJobs == false else {
+            return
+        }
+        
+        isFetchingJobs = true
+        
+        let worker = FirebaseWorker<Job>()
+        worker.fetchArray().done { jobs in
+            self.jobs = jobs.sorted(by: { (l, r) -> Bool in
+                guard let startLeft = l.startDate, let startRight = r.startDate else {
+                    return false
+                }
+                
+                return startLeft > startRight
+            })
+        }.catch { [weak self] error in
+            self?.weakViewControllerPresenter?.presentError(error)
+            self?.isFetchingJobs = false
+        }
     }
 }

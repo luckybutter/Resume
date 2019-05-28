@@ -11,6 +11,8 @@ import Firebase
 
 
 struct Job: FirestoreLoadable {
+    let collectionKey: String = "job"
+    
     let jobTitle:String
     let employerTitle:String
     let startDate:Date?
@@ -41,8 +43,6 @@ struct Job: FirestoreLoadable {
         }else {
             self.endDate = nil
         }
-        
-        
         
     }
 }

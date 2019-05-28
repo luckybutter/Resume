@@ -16,10 +16,17 @@ class ResumeViewControllerPresenter: NSObject, ViewControllerPresenter {
     weak var weakViewControllerBrain: ResumeViewControllerBrain?
     
     func handleViewDidLoad() {
-        weakViewController?.jobsTableView.delegate = self
-        weakViewController?.jobsTableView.dataSource = self
-        weakViewController?.jobsTableView.rowHeight = UITableView.automaticDimension
-        weakViewController?.jobsTableView.estimatedRowHeight = 400
+        let tableView = weakViewController?.jobsTableView
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.rowHeight = UITableView.automaticDimension
+        
+        let control = UIRefreshControl()
+        tableView?.refreshControl = control
+        
+        control.attributedTitle = NSAttributedString(string: "")
+        control.addTarget(self, action: #selector(spinnerRefresh(sender:)), for: UIControl.Event.valueChanged)
+        tableView?.addSubview(control)
     }
     
     func handleViewWillAppear() {
@@ -29,11 +36,31 @@ class ResumeViewControllerPresenter: NSObject, ViewControllerPresenter {
     func handleViewDidAppear() {
         
     }
+    
+    @objc func spinnerRefresh(sender: UIRefreshControl) {
+        weakViewControllerBrain?.fetchJobs()
+    }
 }
 
 extension ResumeViewControllerPresenter {
     func refreshUI() {
         weakViewController?.jobsTableView.reloadData()
+    }
+    
+    func presentError(_ error:Error) {
+        let alert = UIAlertController(title: "I'm Sorry", message: "Here's the error: \(error)", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let vc = self?.weakViewController else {
+                return
+            }
+            
+            vc.present(alert, animated: true, completion: {
+                
+            })
+        }
     }
 }
 
@@ -58,5 +85,6 @@ extension ResumeViewControllerPresenter: UITableViewDelegate, UITableViewDataSou
         }
         
         cell.setup(withJob: jobs[indexPath.row])
+        cell.layoutIfNeeded()
     }
 }

@@ -34,6 +34,7 @@
 		4D44A9C7229CA43000F00DB9 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9BD229CA43000F00DB9 /* Lato-Light.ttf */; };
 		4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9C8229CAAB200F00DB9 /* Worker.swift */; };
 		4D44A9CB229CB0F500F00DB9 /* FirestoreLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */; };
+		4D44A9CD229CBD1D00F00DB9 /* PromiseKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */; };
 		F54303393C0E4E3A7D189F55 /* Pods_Resume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870718A7120D5E30BDC975D7 /* Pods_Resume.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		4D44A9BD229CA43000F00DB9 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		4D44A9C8229CAAB200F00DB9 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreLoadable.swift; sourceTree = "<group>"; };
+		4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromiseKit+.swift"; sourceTree = "<group>"; };
 		5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resume/Pods-Resume.debug.xcconfig"; sourceTree = "<group>"; };
 		870718A7120D5E30BDC975D7 /* Pods_Resume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4D44A99F229C624200F00DB9 /* Date+.swift */,
+				4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */,
 			);
 			path = "Global Extensions";
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D44A9CD229CBD1D00F00DB9 /* PromiseKit+.swift in Sources */,
 				4D44A9A2229C646300F00DB9 /* ResumeViewControllerBrain.swift in Sources */,
 				4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */,
 				4D44A9AD229C9EA800F00DB9 /* JobCell.swift in Sources */,
