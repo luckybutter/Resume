@@ -7,10 +7,42 @@
 //
 
 import Foundation
+import Firebase
 
-struct Job: Decodable {
-    let title:String
-    let startDate:Date
-    let endDate:Date
+
+struct Job: FirestoreLoadable {
+    let jobTitle:String
+    let employerTitle:String
+    let startDate:Date?
+    let endDate:Date?
+    let details:[String]
     
+    enum CodingKeys : String {
+        case jobTitle
+        case employerTitle
+        case startDate
+        case endDate
+        case details
+    }
+    
+    init(firestoreObjectPayload payload: [String : Any]) {
+        self.jobTitle = (payload[CodingKeys.jobTitle.rawValue] as? String) ?? ""
+        self.employerTitle = (payload[CodingKeys.employerTitle.rawValue] as? String) ?? ""
+        self.details = (payload[CodingKeys.details.rawValue] as? [String]) ?? []
+        
+        if let startTimeStamp = (payload[CodingKeys.startDate.rawValue] as? Timestamp) {
+            self.startDate = startTimeStamp.dateValue()
+        } else {
+            self.startDate = nil
+        }
+        
+        if let endTimeStamp = (payload[CodingKeys.endDate.rawValue] as? Timestamp) {
+            self.endDate = endTimeStamp.dateValue()
+        }else {
+            self.endDate = nil
+        }
+        
+        
+        
+    }
 }

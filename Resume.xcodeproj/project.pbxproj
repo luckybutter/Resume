@@ -8,22 +8,68 @@
 
 /* Begin PBXBuildFile section */
 		4D44A988229C587200F00DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A987229C587200F00DB9 /* AppDelegate.swift */; };
-		4D44A98A229C587200F00DB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A989229C587200F00DB9 /* ViewController.swift */; };
-		4D44A98D229C587200F00DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98B229C587200F00DB9 /* Main.storyboard */; };
+		4D44A98A229C587200F00DB9 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A989229C587200F00DB9 /* ResumeViewController.swift */; };
+		4D44A98D229C587200F00DB9 /* ResumeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98B229C587200F00DB9 /* ResumeViewController.storyboard */; };
 		4D44A98F229C587500F00DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98E229C587500F00DB9 /* Assets.xcassets */; };
 		4D44A992229C587500F00DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */; };
 		4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A99C229C5F8700F00DB9 /* Job.swift */; };
+		4D44A9A0229C624200F00DB9 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A99F229C624200F00DB9 /* Date+.swift */; };
+		4D44A9A2229C646300F00DB9 /* ResumeViewControllerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */; };
+		4D44A9A4229C646E00F00DB9 /* ResumeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */; };
+		4D44A9A7229C64A600F00DB9 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A6229C64A600F00DB9 /* Brain.swift */; };
+		4D44A9A9229C66BB00F00DB9 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A8229C66BB00F00DB9 /* Presenter.swift */; };
+		4D44A9AB229C995500F00DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9AA229C995500F00DB9 /* GoogleService-Info.plist */; };
+		4D44A9AD229C9EA800F00DB9 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9AC229C9EA800F00DB9 /* JobCell.swift */; };
+		4D44A9AF229C9F9900F00DB9 /* OneTimeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */; };
+		4D44A9B1229CA34C00F00DB9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9B0229CA34C00F00DB9 /* AppConstants.swift */; };
+		4D44A9BE229CA43000F00DB9 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B4229CA43000F00DB9 /* Lato-Italic.ttf */; };
+		4D44A9BF229CA43000F00DB9 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B5229CA43000F00DB9 /* Lato-LightItalic.ttf */; };
+		4D44A9C0229CA43000F00DB9 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B6229CA43000F00DB9 /* Lato-Bold.ttf */; };
+		4D44A9C1229CA43000F00DB9 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B7229CA43000F00DB9 /* Lato-Black.ttf */; };
+		4D44A9C2229CA43000F00DB9 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B8229CA43000F00DB9 /* Lato-HairlineItalic.ttf */; };
+		4D44A9C3229CA43000F00DB9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B9229CA43000F00DB9 /* Lato-Regular.ttf */; };
+		4D44A9C4229CA43000F00DB9 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9BA229CA43000F00DB9 /* Lato-Hairline.ttf */; };
+		4D44A9C5229CA43000F00DB9 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9BB229CA43000F00DB9 /* Lato-BlackItalic.ttf */; };
+		4D44A9C6229CA43000F00DB9 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9BC229CA43000F00DB9 /* Lato-BoldItalic.ttf */; };
+		4D44A9C7229CA43000F00DB9 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9BD229CA43000F00DB9 /* Lato-Light.ttf */; };
+		4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9C8229CAAB200F00DB9 /* Worker.swift */; };
+		4D44A9CB229CB0F500F00DB9 /* FirestoreLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */; };
+		F54303393C0E4E3A7D189F55 /* Pods_Resume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870718A7120D5E30BDC975D7 /* Pods_Resume.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16380D387791D473C6F3593E /* Pods-Resume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume.release.xcconfig"; path = "Pods/Target Support Files/Pods-Resume/Pods-Resume.release.xcconfig"; sourceTree = "<group>"; };
 		4D44A984229C587200F00DB9 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D44A987229C587200F00DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D44A989229C587200F00DB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4D44A98C229C587200F00DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D44A989229C587200F00DB9 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		4D44A98C229C587200F00DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ResumeViewController.storyboard; sourceTree = "<group>"; };
 		4D44A98E229C587500F00DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D44A991229C587500F00DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D44A993229C587500F00DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D44A99C229C5F8700F00DB9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		4D44A99F229C624200F00DB9 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewControllerBrain.swift; sourceTree = "<group>"; };
+		4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewControllerPresenter.swift; sourceTree = "<group>"; };
+		4D44A9A6229C64A600F00DB9 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		4D44A9A8229C66BB00F00DB9 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		4D44A9AA229C995500F00DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D44A9AC229C9EA800F00DB9 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeSetup.swift; sourceTree = "<group>"; };
+		4D44A9B0229CA34C00F00DB9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		4D44A9B4229CA43000F00DB9 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		4D44A9B5229CA43000F00DB9 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		4D44A9B6229CA43000F00DB9 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		4D44A9B7229CA43000F00DB9 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		4D44A9B8229CA43000F00DB9 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		4D44A9B9229CA43000F00DB9 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		4D44A9BA229CA43000F00DB9 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		4D44A9BB229CA43000F00DB9 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4D44A9BC229CA43000F00DB9 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4D44A9BD229CA43000F00DB9 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		4D44A9C8229CAAB200F00DB9 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreLoadable.swift; sourceTree = "<group>"; };
+		5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resume/Pods-Resume.debug.xcconfig"; sourceTree = "<group>"; };
+		870718A7120D5E30BDC975D7 /* Pods_Resume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +77,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54303393C0E4E3A7D189F55 /* Pods_Resume.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BFE39F3E3E9169C8D46FC8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				870718A7120D5E30BDC975D7 /* Pods_Resume.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		400AFD85A75916D4C978B4CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */,
+				16380D387791D473C6F3593E /* Pods-Resume.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4D44A97B229C587200F00DB9 = {
 			isa = PBXGroup;
 			children = (
 				4D44A986229C587200F00DB9 /* Resume */,
 				4D44A985229C587200F00DB9 /* Products */,
+				400AFD85A75916D4C978B4CC /* Pods */,
+				3BFE39F3E3E9169C8D46FC8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +122,9 @@
 		4D44A986229C587200F00DB9 /* Resume */ = {
 			isa = PBXGroup;
 			children = (
+				4D44A9B2229CA3D400F00DB9 /* Resources */,
+				4D44A9A5229C648700F00DB9 /* Protocols */,
+				4D44A99E229C622500F00DB9 /* Global Extensions */,
 				4D44A99B229C5F2900F00DB9 /* Misc */,
 				4D44A99A229C5F2300F00DB9 /* UI */,
 				4D44A999229C5F1C00F00DB9 /* Models */,
@@ -74,8 +143,11 @@
 		4D44A99A229C5F2300F00DB9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4D44A989229C587200F00DB9 /* ViewController.swift */,
-				4D44A98B229C587200F00DB9 /* Main.storyboard */,
+				4D44A989229C587200F00DB9 /* ResumeViewController.swift */,
+				4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */,
+				4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */,
+				4D44A98B229C587200F00DB9 /* ResumeViewController.storyboard */,
+				4D44A9AC229C9EA800F00DB9 /* JobCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -83,12 +155,59 @@
 		4D44A99B229C5F2900F00DB9 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4D44A9AA229C995500F00DB9 /* GoogleService-Info.plist */,
 				4D44A987229C587200F00DB9 /* AppDelegate.swift */,
 				4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */,
 				4D44A98E229C587500F00DB9 /* Assets.xcassets */,
 				4D44A993229C587500F00DB9 /* Info.plist */,
+				4D44A9B0229CA34C00F00DB9 /* AppConstants.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		4D44A99E229C622500F00DB9 /* Global Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A99F229C624200F00DB9 /* Date+.swift */,
+			);
+			path = "Global Extensions";
+			sourceTree = "<group>";
+		};
+		4D44A9A5229C648700F00DB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A9A6229C64A600F00DB9 /* Brain.swift */,
+				4D44A9A8229C66BB00F00DB9 /* Presenter.swift */,
+				4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */,
+				4D44A9C8229CAAB200F00DB9 /* Worker.swift */,
+				4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4D44A9B2229CA3D400F00DB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A9B3229CA43000F00DB9 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4D44A9B3229CA43000F00DB9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A9B4229CA43000F00DB9 /* Lato-Italic.ttf */,
+				4D44A9B5229CA43000F00DB9 /* Lato-LightItalic.ttf */,
+				4D44A9B6229CA43000F00DB9 /* Lato-Bold.ttf */,
+				4D44A9B7229CA43000F00DB9 /* Lato-Black.ttf */,
+				4D44A9B8229CA43000F00DB9 /* Lato-HairlineItalic.ttf */,
+				4D44A9B9229CA43000F00DB9 /* Lato-Regular.ttf */,
+				4D44A9BA229CA43000F00DB9 /* Lato-Hairline.ttf */,
+				4D44A9BB229CA43000F00DB9 /* Lato-BlackItalic.ttf */,
+				4D44A9BC229CA43000F00DB9 /* Lato-BoldItalic.ttf */,
+				4D44A9BD229CA43000F00DB9 /* Lato-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D44A996229C587500F00DB9 /* Build configuration list for PBXNativeTarget "Resume" */;
 			buildPhases = (
+				4FA86133366E8380738739B0 /* [CP] Check Pods Manifest.lock */,
 				4D44A980229C587200F00DB9 /* Sources */,
 				4D44A981229C587200F00DB9 /* Frameworks */,
 				4D44A982229C587200F00DB9 /* Resources */,
+				5B216A2ED6AA29EC8934C98C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,34 +270,116 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D44A9C0229CA43000F00DB9 /* Lato-Bold.ttf in Resources */,
+				4D44A9BE229CA43000F00DB9 /* Lato-Italic.ttf in Resources */,
+				4D44A9C4229CA43000F00DB9 /* Lato-Hairline.ttf in Resources */,
+				4D44A9BF229CA43000F00DB9 /* Lato-LightItalic.ttf in Resources */,
 				4D44A992229C587500F00DB9 /* LaunchScreen.storyboard in Resources */,
+				4D44A9C1229CA43000F00DB9 /* Lato-Black.ttf in Resources */,
+				4D44A9C2229CA43000F00DB9 /* Lato-HairlineItalic.ttf in Resources */,
+				4D44A9AB229C995500F00DB9 /* GoogleService-Info.plist in Resources */,
+				4D44A9C5229CA43000F00DB9 /* Lato-BlackItalic.ttf in Resources */,
+				4D44A9C3229CA43000F00DB9 /* Lato-Regular.ttf in Resources */,
 				4D44A98F229C587500F00DB9 /* Assets.xcassets in Resources */,
-				4D44A98D229C587200F00DB9 /* Main.storyboard in Resources */,
+				4D44A98D229C587200F00DB9 /* ResumeViewController.storyboard in Resources */,
+				4D44A9C6229CA43000F00DB9 /* Lato-BoldItalic.ttf in Resources */,
+				4D44A9C7229CA43000F00DB9 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FA86133366E8380738739B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Resume-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B216A2ED6AA29EC8934C98C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Resume/Pods-Resume-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Resume/Pods-Resume-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D44A980229C587200F00DB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D44A98A229C587200F00DB9 /* ViewController.swift in Sources */,
+				4D44A9A2229C646300F00DB9 /* ResumeViewControllerBrain.swift in Sources */,
+				4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */,
+				4D44A9AD229C9EA800F00DB9 /* JobCell.swift in Sources */,
+				4D44A98A229C587200F00DB9 /* ResumeViewController.swift in Sources */,
+				4D44A9B1229CA34C00F00DB9 /* AppConstants.swift in Sources */,
+				4D44A9AF229C9F9900F00DB9 /* OneTimeSetup.swift in Sources */,
+				4D44A9A9229C66BB00F00DB9 /* Presenter.swift in Sources */,
 				4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */,
+				4D44A9A4229C646E00F00DB9 /* ResumeViewControllerPresenter.swift in Sources */,
+				4D44A9CB229CB0F500F00DB9 /* FirestoreLoadable.swift in Sources */,
+				4D44A9A7229C64A600F00DB9 /* Brain.swift in Sources */,
 				4D44A988229C587200F00DB9 /* AppDelegate.swift in Sources */,
+				4D44A9A0229C624200F00DB9 /* Date+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D44A98B229C587200F00DB9 /* Main.storyboard */ = {
+		4D44A98B229C587200F00DB9 /* ResumeViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4D44A98C229C587200F00DB9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ResumeViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */ = {
@@ -308,6 +511,7 @@
 		};
 		4D44A997229C587500F00DB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +530,7 @@
 		};
 		4D44A998229C587500F00DB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16380D387791D473C6F3593E /* Pods-Resume.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
