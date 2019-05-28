@@ -7,6 +7,7 @@ I am Matt Canoy.
 I am glad you have found my resume App. 
 
 (You will need to setup the project via `pod install` from Cocoapods in order for it to run as intended)
+Setup Information: https://cocoapods.org/
 
 I had a personal goal of creating a resume app for myself with the time constraint of 1 day to force me to try and create this app from start to finish without wiggle room to continuously develop and feature creep it to death. One huge stipulation here, I did not code this exclusively over the course of the day. I spent Memorial day with my girlfriend exercising, cleaning up the apartment, playing video games with her, had a long discussion with the team I am still building other products with and working in the free time. My personal work/life balance is extremely important to me but if there is something that needs to be done I will do it.
 
