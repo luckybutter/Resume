@@ -1,5 +1,5 @@
 //
-//  Brain.swift
+//  Logic.swift
 //  Resume
 //
 //  Created by Matthew Canoy on 5/27/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// Brains are meant to think, synthesize information and communicate outward.
-protocol Brain {
+/// Logic objects are meant to think, synthesize information and communicate outward.
+protocol Logic {
     
 }
 
@@ -17,13 +17,16 @@ protocol ViewControllerDelegateResponder {
     
 }
 
-protocol ViewControllerBrain: Brain, ViewControllerDelegateResponder {
+/// Sets up the two 
+protocol ViewControllerLogic: Logic, ViewControllerDelegateResponder {
     associatedtype ViewController
     associatedtype ViewControllerPresenter
     
+    /// Do not forget to declare `weak`, for safety purposes
     var weakViewController:ViewController? { get }
-    var weakViewControllerPresenter:ViewControllerPresenter? { get }
     
+    /// Do not forget to declare `weak`, for safety purposes
+    var weakViewControllerPresenter:ViewControllerPresenter? { get }
 }
 
 extension ViewControllerDelegateResponder {

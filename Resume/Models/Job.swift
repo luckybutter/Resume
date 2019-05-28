@@ -11,7 +11,7 @@ import Firebase
 
 
 struct Job: FirestoreLoadable {
-    let collectionKey: String = "job"
+    static let collectionKey: String = "job"
     
     let jobTitle:String
     let employerTitle:String

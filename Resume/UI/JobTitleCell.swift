@@ -1,5 +1,5 @@
 //
-//  JobCell.swift
+//  JobTitleCell.swift
 //  Resume
 //
 //  Created by Matthew Canoy on 5/27/19.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class JobCell: UITableViewCell, OneTimeSetup {
+class JobTitleCell: UITableViewCell, OneTimeSetup {
     @IBOutlet weak var employerTitleLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     var hasSetup: Bool = false
@@ -22,20 +21,7 @@ class JobCell: UITableViewCell, OneTimeSetup {
         employerTitleLabel.text = job.employerTitle
         jobTitleLabel.text = job.jobTitle
         
-        setupDetailsText(fromTextArray: job.details)
         setupDateText(fromStartDate: job.startDate, endDate: job.endDate)
-        
-        layoutIfNeeded()
-    }
-    
-    func setupDetailsText(fromTextArray textArray:[String]) {
-        var combinedText = ""
-        
-        for text in textArray {
-            combinedText += "💡 \(text)\n"
-        }
-        
-        detailsLabel.text = combinedText
     }
     
     func setupDateText(fromStartDate startDate:Date?, endDate:Date?) {
@@ -46,7 +32,12 @@ class JobCell: UITableViewCell, OneTimeSetup {
         
         var dateText = ""
         
-        let formatter = DateFormatter.yyyyMM
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM yyyy"
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        
         dateText += formatter.string(from: startDate)
         
         if let endDate = endDate {
@@ -59,9 +50,8 @@ class JobCell: UITableViewCell, OneTimeSetup {
     }
     
     func handleFirstTimeSetup() {
-        employerTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .black).withSize(24)
-        jobTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(20)
+        employerTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .black).withSize(20)
+        jobTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(17)
         dateLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(11)
-        detailsLabel.font = AppConstant.quickFont(family: .lato, weight: .regular).withSize(17)
     }
 }

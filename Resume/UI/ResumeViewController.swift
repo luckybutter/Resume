@@ -11,34 +11,34 @@ import UIKit
 class ResumeViewController: UIViewController {
     @IBOutlet weak var jobsTableView: UITableView!
     
-    let brain = ResumeViewControllerBrain()
+    let logic = ResumeViewControllerLogic()
     let presenter = ResumeViewControllerPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        brain.weakViewController = self
-        brain.weakViewControllerPresenter = presenter
+        logic.weakViewController = self
+        logic.weakViewControllerPresenter = presenter
         
         presenter.weakViewController = self
-        presenter.weakViewControllerBrain = brain
+        presenter.weakViewControllerBrain = logic
         
-        brain.handleViewDidLoad()
+        logic.handleViewDidLoad()
         presenter.handleViewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        brain.handleViewWillAppear()
+        logic.handleViewWillAppear()
         presenter.handleViewWillAppear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        brain.handleViewDidAppear()
+        logic.handleViewDidAppear()
         presenter.handleViewDidAppear()
     }
 

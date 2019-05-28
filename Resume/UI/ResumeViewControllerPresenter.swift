@@ -10,18 +10,19 @@ import UIKit
 
 class ResumeViewControllerPresenter: NSObject, ViewControllerPresenter {
     typealias ViewController = ResumeViewController
-    typealias ViewControllerBrain = ResumeViewControllerBrain
+    typealias ViewControllerBrain = ResumeViewControllerLogic
     
     weak var weakViewController: ResumeViewController?
-    weak var weakViewControllerBrain: ResumeViewControllerBrain?
+    weak var weakViewControllerBrain: ResumeViewControllerLogic?
+    
+    let control = UIRefreshControl()
     
     func handleViewDidLoad() {
         let tableView = weakViewController?.jobsTableView
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.rowHeight = UITableView.automaticDimension
-        
-        let control = UIRefreshControl()
+        tableView?.estimatedRowHeight = UITableView.automaticDimension
         tableView?.refreshControl = control
         
         control.attributedTitle = NSAttributedString(string: "")
@@ -33,18 +34,13 @@ class ResumeViewControllerPresenter: NSObject, ViewControllerPresenter {
         refreshUI()
     }
     
-    func handleViewDidAppear() {
-        
-    }
-    
     @objc func spinnerRefresh(sender: UIRefreshControl) {
         weakViewControllerBrain?.fetchJobs()
     }
-}
-
-extension ResumeViewControllerPresenter {
+    
     func refreshUI() {
         weakViewController?.jobsTableView.reloadData()
+        control.endRefreshing()
     }
     
     func presentError(_ error:Error) {
@@ -66,25 +62,37 @@ extension ResumeViewControllerPresenter {
 
 extension ResumeViewControllerPresenter: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return weakViewControllerBrain?.jobs.count ?? 0
+        return weakViewControllerBrain?.currentDisplayInfos.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath)
+        guard let infos = weakViewControllerBrain?.currentDisplayInfos else {
+            assertionFailure("infos should exist")
+            return UITableViewCell()
+        }
+        
+        let info = infos[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: info.cellIdentifier, for: indexPath)
+        
+        switch info {
+        case .title(let job):
+            guard let jobTitleCell = cell as? JobTitleCell else {
+                assertionFailure("The only cell in the application isn't returning")
+                return cell
+            }
+            
+            jobTitleCell.setup(withJob: job)
+            
+        case .detail(let text):
+            guard let jobDetailCell = cell as? JobDetailCell else {
+                assertionFailure("The only cell in the application isn't returning")
+                return cell
+            }
+            
+            jobDetailCell.setup(withDetailText: text)
+        }
+        
+        return cell
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? JobCell else {
-            assertionFailure("The only cell in the application isn't returning")
-            return
-        }
-        
-        guard let jobs = weakViewControllerBrain?.jobs else {
-            assertionFailure("brain is nil")
-            return
-        }
-        
-        cell.setup(withJob: jobs[indexPath.row])
-        cell.layoutIfNeeded()
-    }
 }

@@ -13,13 +13,12 @@
 		4D44A98F229C587500F00DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A98E229C587500F00DB9 /* Assets.xcassets */; };
 		4D44A992229C587500F00DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A990229C587500F00DB9 /* LaunchScreen.storyboard */; };
 		4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A99C229C5F8700F00DB9 /* Job.swift */; };
-		4D44A9A0229C624200F00DB9 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A99F229C624200F00DB9 /* Date+.swift */; };
-		4D44A9A2229C646300F00DB9 /* ResumeViewControllerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */; };
+		4D44A9A2229C646300F00DB9 /* ResumeViewControllerLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A1229C646300F00DB9 /* ResumeViewControllerLogic.swift */; };
 		4D44A9A4229C646E00F00DB9 /* ResumeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */; };
-		4D44A9A7229C64A600F00DB9 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A6229C64A600F00DB9 /* Brain.swift */; };
+		4D44A9A7229C64A600F00DB9 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A6229C64A600F00DB9 /* Logic.swift */; };
 		4D44A9A9229C66BB00F00DB9 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9A8229C66BB00F00DB9 /* Presenter.swift */; };
 		4D44A9AB229C995500F00DB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9AA229C995500F00DB9 /* GoogleService-Info.plist */; };
-		4D44A9AD229C9EA800F00DB9 /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9AC229C9EA800F00DB9 /* JobCell.swift */; };
+		4D44A9AD229C9EA800F00DB9 /* JobTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9AC229C9EA800F00DB9 /* JobTitleCell.swift */; };
 		4D44A9AF229C9F9900F00DB9 /* OneTimeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */; };
 		4D44A9B1229CA34C00F00DB9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9B0229CA34C00F00DB9 /* AppConstants.swift */; };
 		4D44A9BE229CA43000F00DB9 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9B4229CA43000F00DB9 /* Lato-Italic.ttf */; };
@@ -35,6 +34,7 @@
 		4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9C8229CAAB200F00DB9 /* Worker.swift */; };
 		4D44A9CB229CB0F500F00DB9 /* FirestoreLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */; };
 		4D44A9CD229CBD1D00F00DB9 /* PromiseKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */; };
+		4D44A9CF229D086600F00DB9 /* JobDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9CE229D086600F00DB9 /* JobDetailCell.swift */; };
 		F54303393C0E4E3A7D189F55 /* Pods_Resume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870718A7120D5E30BDC975D7 /* Pods_Resume.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,13 +48,12 @@
 		4D44A991229C587500F00DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D44A993229C587500F00DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D44A99C229C5F8700F00DB9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		4D44A99F229C624200F00DB9 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewControllerBrain.swift; sourceTree = "<group>"; };
+		4D44A9A1229C646300F00DB9 /* ResumeViewControllerLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewControllerLogic.swift; sourceTree = "<group>"; };
 		4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewControllerPresenter.swift; sourceTree = "<group>"; };
-		4D44A9A6229C64A600F00DB9 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		4D44A9A6229C64A600F00DB9 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		4D44A9A8229C66BB00F00DB9 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		4D44A9AA229C995500F00DB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4D44A9AC229C9EA800F00DB9 /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		4D44A9AC229C9EA800F00DB9 /* JobTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTitleCell.swift; sourceTree = "<group>"; };
 		4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeSetup.swift; sourceTree = "<group>"; };
 		4D44A9B0229CA34C00F00DB9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4D44A9B4229CA43000F00DB9 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		4D44A9C8229CAAB200F00DB9 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		4D44A9CA229CB0F500F00DB9 /* FirestoreLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreLoadable.swift; sourceTree = "<group>"; };
 		4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromiseKit+.swift"; sourceTree = "<group>"; };
+		4D44A9CE229D086600F00DB9 /* JobDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailCell.swift; sourceTree = "<group>"; };
 		5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resume/Pods-Resume.debug.xcconfig"; sourceTree = "<group>"; };
 		870718A7120D5E30BDC975D7 /* Pods_Resume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,10 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				4D44A989229C587200F00DB9 /* ResumeViewController.swift */,
-				4D44A9A1229C646300F00DB9 /* ResumeViewControllerBrain.swift */,
+				4D44A9A1229C646300F00DB9 /* ResumeViewControllerLogic.swift */,
 				4D44A9A3229C646E00F00DB9 /* ResumeViewControllerPresenter.swift */,
 				4D44A98B229C587200F00DB9 /* ResumeViewController.storyboard */,
-				4D44A9AC229C9EA800F00DB9 /* JobCell.swift */,
+				4D44A9AC229C9EA800F00DB9 /* JobTitleCell.swift */,
+				4D44A9CE229D086600F00DB9 /* JobDetailCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -170,7 +171,6 @@
 		4D44A99E229C622500F00DB9 /* Global Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D44A99F229C624200F00DB9 /* Date+.swift */,
 				4D44A9CC229CBD1D00F00DB9 /* PromiseKit+.swift */,
 			);
 			path = "Global Extensions";
@@ -179,7 +179,7 @@
 		4D44A9A5229C648700F00DB9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4D44A9A6229C64A600F00DB9 /* Brain.swift */,
+				4D44A9A6229C64A600F00DB9 /* Logic.swift */,
 				4D44A9A8229C66BB00F00DB9 /* Presenter.swift */,
 				4D44A9AE229C9F9900F00DB9 /* OneTimeSetup.swift */,
 				4D44A9C8229CAAB200F00DB9 /* Worker.swift */,
@@ -359,19 +359,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D44A9CD229CBD1D00F00DB9 /* PromiseKit+.swift in Sources */,
-				4D44A9A2229C646300F00DB9 /* ResumeViewControllerBrain.swift in Sources */,
+				4D44A9A2229C646300F00DB9 /* ResumeViewControllerLogic.swift in Sources */,
 				4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */,
-				4D44A9AD229C9EA800F00DB9 /* JobCell.swift in Sources */,
+				4D44A9AD229C9EA800F00DB9 /* JobTitleCell.swift in Sources */,
 				4D44A98A229C587200F00DB9 /* ResumeViewController.swift in Sources */,
 				4D44A9B1229CA34C00F00DB9 /* AppConstants.swift in Sources */,
+				4D44A9CF229D086600F00DB9 /* JobDetailCell.swift in Sources */,
 				4D44A9AF229C9F9900F00DB9 /* OneTimeSetup.swift in Sources */,
 				4D44A9A9229C66BB00F00DB9 /* Presenter.swift in Sources */,
 				4D44A99D229C5F8700F00DB9 /* Job.swift in Sources */,
 				4D44A9A4229C646E00F00DB9 /* ResumeViewControllerPresenter.swift in Sources */,
 				4D44A9CB229CB0F500F00DB9 /* FirestoreLoadable.swift in Sources */,
-				4D44A9A7229C64A600F00DB9 /* Brain.swift in Sources */,
+				4D44A9A7229C64A600F00DB9 /* Logic.swift in Sources */,
 				4D44A988229C587200F00DB9 /* AppDelegate.swift in Sources */,
-				4D44A9A0229C624200F00DB9 /* Date+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutter.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luckybutter.Resume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
