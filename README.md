@@ -4,7 +4,7 @@ Greetings!
 
 I am Matt Canoy. https://www.linkedin.com/in/luckybuttermc/
 
-I am glad you have found my resume App. 
+I am glad you have found my resume App. Can you figure out why it's named "Pudding"? :)
 
 (You will need to setup the project via `pod install` from Cocoapods in order for it to run as intended https://cocoapods.org/)
 
