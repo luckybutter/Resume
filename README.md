@@ -19,4 +19,4 @@ luckybutter.mattc@gmail.com
 
 Current wants for future version(s):
 - Quick + Nimble integration for unit tests
-- adding a profile page to show extraneous information
+- adding a profile page to show extraneous information such as my interets: Fitness, Singing, D&D, Fighting Games, Learning, Table Tennis, Board Games and much more
