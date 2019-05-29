@@ -12,6 +12,7 @@ class JobTitleCell: UITableViewCell, OneTimeSetup {
     @IBOutlet weak var employerTitleLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
     
     var hasSetup: Bool = false
     
@@ -21,7 +22,19 @@ class JobTitleCell: UITableViewCell, OneTimeSetup {
         employerTitleLabel.text = job.employerTitle
         jobTitleLabel.text = job.jobTitle
         
+        setupTagsDisplay(tags: job.tags)
         setupDateText(fromStartDate: job.startDate, endDate: job.endDate)
+    }
+    
+    func setupTagsDisplay(tags:[String]) {
+        let sortedTags = tags.sorted(by: { $0 < $1 })
+        
+        var tagsText = ""
+        for tag in sortedTags {
+            tagsText += "\(tag)   "
+        }
+        
+        tagsLabel.text = tagsText
     }
     
     func setupDateText(fromStartDate startDate:Date?, endDate:Date?) {
@@ -52,6 +65,7 @@ class JobTitleCell: UITableViewCell, OneTimeSetup {
     func handleFirstTimeSetup() {
         employerTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .black).withSize(20)
         jobTitleLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(17)
-        dateLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(11)
+        dateLabel.font = AppConstant.quickFont(family: .lato, weight: .bold).withSize(12)
+        tagsLabel.font = AppConstant.quickFont(family: .lato, weight: .italic).withSize(11)
     }
 }

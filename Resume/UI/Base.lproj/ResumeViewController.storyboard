@@ -47,15 +47,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-ox-mYv">
+                                                    <rect key="frame" x="20" y="122.5" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="pyb-sG-xLg" firstAttribute="top" secondItem="Pdr-Xn-RTy" secondAttribute="bottom" constant="2" id="3u9-8z-7HZ"/>
                                                 <constraint firstItem="n1t-ZA-0ho" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="leading" id="4Ze-ag-6pY"/>
+                                                <constraint firstItem="m6N-ox-mYv" firstAttribute="trailing" secondItem="Pdr-Xn-RTy" secondAttribute="trailing" id="AYB-2A-hRA"/>
                                                 <constraint firstItem="n1t-ZA-0ho" firstAttribute="trailing" secondItem="Pdr-Xn-RTy" secondAttribute="trailing" id="Iul-wW-vMw"/>
-                                                <constraint firstAttribute="bottom" secondItem="n1t-ZA-0ho" secondAttribute="bottom" priority="250" id="OTQ-dB-ZFr"/>
+                                                <constraint firstAttribute="bottom" secondItem="m6N-ox-mYv" secondAttribute="bottom" priority="250" constant="4" id="JD5-Cv-cZT"/>
                                                 <constraint firstItem="pyb-sG-xLg" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="leading" id="b5e-Qh-rpe"/>
+                                                <constraint firstItem="m6N-ox-mYv" firstAttribute="top" secondItem="n1t-ZA-0ho" secondAttribute="bottom" constant="2" id="ekY-36-6VI"/>
                                                 <constraint firstItem="Pdr-Xn-RTy" firstAttribute="top" secondItem="pHO-xK-BUB" secondAttribute="top" constant="30" id="fuA-4h-TSr"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pdr-Xn-RTy" secondAttribute="trailing" constant="20" id="hFY-ZQ-zDL"/>
+                                                <constraint firstItem="m6N-ox-mYv" firstAttribute="leading" secondItem="Pdr-Xn-RTy" secondAttribute="leading" id="hlv-QX-RTQ"/>
                                                 <constraint firstItem="Pdr-Xn-RTy" firstAttribute="leading" secondItem="pHO-xK-BUB" secondAttribute="leading" constant="20" id="lDl-x1-JHq"/>
                                                 <constraint firstAttribute="trailing" secondItem="pyb-sG-xLg" secondAttribute="trailing" constant="20" id="nVK-cO-GlH"/>
                                                 <constraint firstItem="n1t-ZA-0ho" firstAttribute="top" secondItem="pyb-sG-xLg" secondAttribute="bottom" constant="8.5" id="t3l-ki-nhX"/>
@@ -65,6 +74,7 @@
                                             <outlet property="dateLabel" destination="pyb-sG-xLg" id="aqc-tH-6TY"/>
                                             <outlet property="employerTitleLabel" destination="Pdr-Xn-RTy" id="Ntu-BP-2En"/>
                                             <outlet property="jobTitleLabel" destination="n1t-ZA-0ho" id="s2D-7f-xzk"/>
+                                            <outlet property="tagsLabel" destination="m6N-ox-mYv" id="FN2-iz-dD9"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JobDetailCell" rowHeight="268" id="fsU-Hb-Ks1" customClass="JobDetailCell" customModule="Resume" customModuleProvider="target">
