@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        setupAppWideStyling()
         return true
     }
 
@@ -46,3 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+fileprivate extension AppDelegate {
+    func setupAppWideStyling() {
+        let tabBarItemAttributes:[NSAttributedString.Key : Any] = [NSAttributedString.Key.font: AppConstant.quickFont(family: .lato, weight: .black).withSize(14)]
+       
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, for: .normal)
+    }
+    
+}
