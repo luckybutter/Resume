@@ -9,5 +9,7 @@ target 'Resume' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'PromiseKit', '~> 6.8'
+  pod 'SDWebImage', '~> 5.0'
+  
 
 end

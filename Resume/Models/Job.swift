@@ -15,7 +15,7 @@ struct Job: FirestoreLoadable {
     
     let jobTitle:String
     let employerTitle:String
-    let startDate:Date?
+    let startDate:Date
     let endDate:Date?
     let details:[String]
     let tags:[String]
@@ -29,7 +29,7 @@ struct Job: FirestoreLoadable {
         case tags
     }
     
-    init(firestoreObjectPayload payload: [String : Any]) {
+    init?(firestoreObjectPayload payload: [String : Any]) {
         self.jobTitle = (payload[CodingKeys.jobTitle.rawValue] as? String) ?? ""
         self.employerTitle = (payload[CodingKeys.employerTitle.rawValue] as? String) ?? ""
         self.details = (payload[CodingKeys.details.rawValue] as? [String]) ?? []
@@ -38,12 +38,12 @@ struct Job: FirestoreLoadable {
         if let startTimeStamp = (payload[CodingKeys.startDate.rawValue] as? Timestamp) {
             self.startDate = startTimeStamp.dateValue()
         } else {
-            self.startDate = nil
+            return nil
         }
         
         if let endTimeStamp = (payload[CodingKeys.endDate.rawValue] as? Timestamp) {
             self.endDate = endTimeStamp.dateValue()
-        }else {
+        } else {
             self.endDate = nil
         }
         

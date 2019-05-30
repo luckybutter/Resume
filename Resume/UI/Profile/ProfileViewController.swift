@@ -9,6 +9,11 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var imageContainerView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var blurbLabel: UILabel!
+    
     let logic = ProfileViewControllerLogic()
     let presenter = ProfileViewControllerPresenter()
     
