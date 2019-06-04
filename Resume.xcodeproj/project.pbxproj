@@ -42,6 +42,8 @@
 		4D44A9DC229F488200F00DB9 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A9DB229F488200F00DB9 /* TabController.storyboard */; };
 		4D44A9DE229F65B400F00DB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9DD229F65B400F00DB9 /* User.swift */; };
 		4D44A9E2229F742E00F00DB9 /* UIKit+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9E1229F742E00F00DB9 /* UIKit+.swift */; };
+		4D44A9EA229FDAA800F00DB9 /* ProfileTagHeatInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9E9229FDAA800F00DB9 /* ProfileTagHeatInfoCell.swift */; };
+		4D44A9EC229FDB0000F00DB9 /* ProfileTagHeatValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A9EB229FDB0000F00DB9 /* ProfileTagHeatValueCell.swift */; };
 		F54303393C0E4E3A7D189F55 /* Pods_Resume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870718A7120D5E30BDC975D7 /* Pods_Resume.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		4D44A9DB229F488200F00DB9 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
 		4D44A9DD229F65B400F00DB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4D44A9E1229F742E00F00DB9 /* UIKit+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+.swift"; sourceTree = "<group>"; };
+		4D44A9E9229FDAA800F00DB9 /* ProfileTagHeatInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTagHeatInfoCell.swift; sourceTree = "<group>"; };
+		4D44A9EB229FDB0000F00DB9 /* ProfileTagHeatValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTagHeatValueCell.swift; sourceTree = "<group>"; };
 		5895046CD750476EC3506D2F /* Pods-Resume.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Resume.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Resume/Pods-Resume.debug.xcconfig"; sourceTree = "<group>"; };
 		870718A7120D5E30BDC975D7 /* Pods_Resume.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Resume.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -245,6 +249,8 @@
 				4D44A9D5229F46B300F00DB9 /* ProfileViewControllerLogic.swift */,
 				4D44A9D4229F46B300F00DB9 /* ProfileViewControllerPresenter.swift */,
 				4D44A9D8229F46C000F00DB9 /* ProfileViewController.storyboard */,
+				4D44A9E9229FDAA800F00DB9 /* ProfileTagHeatInfoCell.swift */,
+				4D44A9EB229FDB0000F00DB9 /* ProfileTagHeatValueCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -409,10 +415,12 @@
 			files = (
 				4D44A9CD229CBD1D00F00DB9 /* PromiseKit+.swift in Sources */,
 				4D44A9A2229C646300F00DB9 /* ResumeViewControllerLogic.swift in Sources */,
+				4D44A9EC229FDB0000F00DB9 /* ProfileTagHeatValueCell.swift in Sources */,
 				4D44A9C9229CAAB200F00DB9 /* Worker.swift in Sources */,
 				4D44A9D7229F46B300F00DB9 /* ProfileViewControllerLogic.swift in Sources */,
 				4D44A9AD229C9EA800F00DB9 /* JobTitleCell.swift in Sources */,
 				4D44A98A229C587200F00DB9 /* ResumeViewController.swift in Sources */,
+				4D44A9EA229FDAA800F00DB9 /* ProfileTagHeatInfoCell.swift in Sources */,
 				4D44A9B1229CA34C00F00DB9 /* AppConstants.swift in Sources */,
 				4D44A9CF229D086600F00DB9 /* JobDetailCell.swift in Sources */,
 				4D44A9D6229F46B300F00DB9 /* ProfileViewControllerPresenter.swift in Sources */,
