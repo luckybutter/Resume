@@ -1,6 +1,6 @@
 # Resume
 
-Greetings!
+Greetings! I am no longer looking for work as of June 7, 2019! (all work on this Resume app is halted for now...)
 
 I am Matt Canoy. https://www.linkedin.com/in/luckybuttermc/
 
