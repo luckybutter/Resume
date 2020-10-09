@@ -44,19 +44,7 @@ class ResumeViewControllerPresenter: NSObject, ViewControllerPresenter {
     }
     
     func presentError(_ error:Error) {
-        let alert = UIAlertController(title: "I'm Sorry", message: "Here's the error: \(error)", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction.init(title: "OK", style: .default, handler: nil))
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let vc = self?.weakViewController else {
-                return
-            }
-            
-            vc.present(alert, animated: true, completion: {
-                
-            })
-        }
+        weakViewController?.showQuickAlert(withTitle: "I'm Sorry", message: "Here's the error: \(error)")
     }
 }
 
@@ -77,7 +65,7 @@ extension ResumeViewControllerPresenter: UITableViewDelegate, UITableViewDataSou
         switch info {
         case .title(let job):
             guard let jobTitleCell = cell as? JobTitleCell else {
-                assertionFailure("The only cell in the application isn't returning")
+                assertionFailure("JobTitleCell should be returned")
                 return cell
             }
             
@@ -85,7 +73,7 @@ extension ResumeViewControllerPresenter: UITableViewDelegate, UITableViewDataSou
             
         case .detail(let text):
             guard let jobDetailCell = cell as? JobDetailCell else {
-                assertionFailure("The only cell in the application isn't returning")
+                assertionFailure("JobDetailCell should be returned")
                 return cell
             }
             

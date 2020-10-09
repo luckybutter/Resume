@@ -15,6 +15,11 @@ protocol FirestoreLoadable {
     static var collectionKey:String { get }
 }
 
+enum FirestoreError: Swift.Error {
+    case retrievalFailed(errorMessage:String)
+    case failedObjectLoad(payload:[String:Any])
+}
+
 struct FirestoreWorker<T:FirestoreLoadable>: Worker {
     
     /// Fetch an array of `FirestoreLoadable` objects from Firestore based on the Fireloadable object's `collectionKey`
@@ -33,13 +38,30 @@ struct FirestoreWorker<T:FirestoreLoadable>: Worker {
                         if let loadable = T(firestoreObjectPayload: document.data()) {
                             extractedLoadables.append(loadable)
                         } else {
-                            assertionFailure("Invalid object loaded")
+                            seal.reject(FirestoreError.failedObjectLoad(payload: document.data()))
                         }
                     }
                     
                     seal.fulfill(extractedLoadables)
                 }
             }
+        }
+    }
+    
+    func fetch(byId id:String) -> Promise<T> {
+        return Promise<T> { seal in
+            let db = Firestore.firestore()
+            db.collection(T.collectionKey).document(id).getDocument(completion: { (document, error) in
+                if let document = document, let data = document.data() {
+                    if let loadable:T = T(firestoreObjectPayload: data) {
+                        seal.fulfill(loadable)
+                    } else {
+                        seal.reject(FirestoreError.failedObjectLoad(payload: data))
+                    }
+                } else {
+                    seal.reject(FirestoreError.retrievalFailed(errorMessage: error?.localizedDescription ?? ""))
+                }
+            })
         }
     }
 }

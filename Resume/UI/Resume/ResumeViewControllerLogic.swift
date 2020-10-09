@@ -63,11 +63,7 @@ fileprivate extension ResumeViewControllerLogic {
     /// - Parameter jobs: Unsorted Jobs
     func updateDisplayInfos(fromJobs jobs:[Job]) {
         self.jobs = jobs.sorted(by: { (l, r) -> Bool in
-            guard let startLeft = l.startDate, let startRight = r.startDate else {
-                return false
-            }
-            
-            return startRight < startLeft
+            return r.startDate < l.startDate
         })
         
         var updatedInfos:[ResumeDisplayInfo] = []
